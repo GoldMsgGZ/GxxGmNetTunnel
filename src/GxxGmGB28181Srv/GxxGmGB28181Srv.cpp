@@ -1,4 +1,6 @@
 #include "GxxGmGB28181Srv.h"
+#include <windows.h>
+#include <iostream>
 
 
 GxxGmGB28181Srv::GxxGmGB28181Srv(const char *ip, int port, const char *id)
@@ -35,29 +37,57 @@ int GxxGmGB28181Srv::Initialize()
 	return err;
 }
 
+// 
+// DWORD WINAPI GxxGmGB28181Srv::HeartBeatThread(LPVOID lpParam)
+// {
+// 	GxxGmGB28181Srv *srv = (GxxGmGB28181Srv*)lpParam;
+// 
+// 	while (true)
+// 	{
+// 
+// 	}
+// 
+// 	return 0;
+// }
+
 
 SIP_REPSOND_CODE GxxGmGB28181Srv::_DevRegist_CallBackFunc(const StruRegistMsg * stuMsg, void * pUserData)
 {
-	return 0;
+	char msg[4096] = {0};
+	sprintf_s(msg, 4096, "来自 %s:%d 的平台(设备) %s 发起了注册信息", stuMsg->stuCnnParam.szIP, stuMsg->stuCnnParam.iPort, stuMsg->stuCnnParam.szGBCode);
+	std::cout<<msg<<std::endl;
+	return SIP_RESPONSE_CODE_SUCCESS;
 }
 
 void GxxGmGB28181Srv::_QueryResult_CallBackFunc(EnumQueryType eType, const char * czAgentGBCode, void * pMsg, void * pUserData)
 {
 	// 
+	char msg[4096] = {0};
+	sprintf_s(msg, 4096, "");
+	std::cout<<msg<<std::endl;
 }
 
 SIP_REPSOND_CODE GxxGmGB28181Srv::_NotifyInfo_CallBackFunc(EnumNotifyType eType, const char * czAgentGBCode, void * pMsg, void * pUserData)
 {
-	return 0;
+	char msg[4096] = {0};
+	sprintf_s(msg, 4096, "");
+	std::cout<<msg<<std::endl;
+	return SIP_RESPONSE_CODE_SUCCESS;
 }
 
 SIP_REPSOND_CODE GxxGmGB28181Srv::_StreamRequest_CallBackFunc(STREAM_HANDLE hStream, const char * czAgentGode, EnumStreamRequest eRequest, 
 													const StruMediaInfo * pInMedia, const StruStreamDescription * pDescri, void * pUserData)
 {
-	return 0;
+	char msg[4096] = {0};
+	sprintf_s(msg, 4096, "");
+	std::cout<<msg<<std::endl;
+	return SIP_RESPONSE_CODE_SUCCESS;
 }
 
 void GxxGmGB28181Srv::_ServerLogCallBack(EnumLogLevel eLevel, const char * szTemp, int iLen, void * pUserData)
 {
 	//
+	char msg[4096] = {0};
+	sprintf_s(msg, 4096, "");
+	std::cout<<msg<<std::endl;
 }

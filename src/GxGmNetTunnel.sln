@@ -8,8 +8,14 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GxxGmGB28181Srv", "GxxGmGB28181Srv\GxxGmGB28181Srv.vcproj", "{AEC5B525-05B6-446F-888E-8BF736D5642A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GxxGmGB28181SrvDemo", "GxxGmGB28181SrvDemo\GxxGmGB28181SrvDemo.vcproj", "{0382AF98-5B88-40A7-872C-3DD12370C135}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AEC5B525-05B6-446F-888E-8BF736D5642A} = {AEC5B525-05B6-446F-888E-8BF736D5642A}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GxxGmGB28181CliDemo", "GxxGmGB28181CliDemo\GxxGmGB28181CliDemo.vcproj", "{E4E6A215-447C-487F-B943-FFA7BAF50486}"
+	ProjectSection(ProjectDependencies) = postProject
+		{98213787-0DD1-4206-A0ED-BF05C2937FD6} = {98213787-0DD1-4206-A0ED-BF05C2937FD6}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

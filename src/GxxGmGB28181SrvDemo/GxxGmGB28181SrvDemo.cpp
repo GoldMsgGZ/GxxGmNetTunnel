@@ -19,7 +19,7 @@
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	GxxGmGB28181Srv srv("127.0.0.1", 5060, "12345678901234567890");
+	GxxGmGB28181Srv srv("192.168.199.181", 5060, "00000000000000000000");
 	int errCode = srv.Initialize();
 
 	getchar();

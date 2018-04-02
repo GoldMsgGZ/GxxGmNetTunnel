@@ -15,6 +15,9 @@ public:
 	int Initialize();
 
 public:
+	//static DWORD WINAPI HeartBeatThread(LPVOID lpParam);
+
+public:
 	static SIP_REPSOND_CODE _DevRegist_CallBackFunc(const StruRegistMsg * stuMsg, void * pUserData);
 	static void _QueryResult_CallBackFunc(EnumQueryType eType, const char * czAgentGBCode, void * pMsg, void * pUserData);
 	static SIP_REPSOND_CODE _NotifyInfo_CallBackFunc(EnumNotifyType eType, const char * czAgentGBCode, void * pMsg, void * pUserData);
